@@ -27,10 +27,10 @@ class Database:
                          (user_id, message, username))
         self.conn.commit()
 
-    def create_information(self, user_id, username, message):
-        self.cur.execute("""insert into ugc_information(user_id, message, username) values (?, ?, ?)""",
-                         (user_id, message, username))
-        self.conn.commit()
+    # def create_information(self, user_id, username, message):
+    #     self.cur.execute("""insert into ugc_information(user_id, message, username) values (?, ?, ?)""",
+    #                      (user_id, message, username))
+    #     self.conn.commit()
 
     def create_call(self, user_id, username, message):
         self.cur.execute("""insert into ugc_murojat(user_id, message, username) values (?, ?, ?)""",

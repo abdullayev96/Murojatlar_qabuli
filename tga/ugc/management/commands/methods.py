@@ -6,20 +6,18 @@ ADMIN_ID = 614916220
 def send_main_menu(context, chat_id, lang_id, message_id=None):
     buttons = [
         #[KeyboardButton(text=globals.BTN_ORDER[lang_id])],
-        [KeyboardButton(text=globals.BTN_COMMENTS[lang_id]), KeyboardButton(text=globals.BTN_INFORS[lang_id])],
+        [KeyboardButton(text=globals.BTN_COMMENTS[lang_id]), KeyboardButton(text=globals.BTN_INFOR[lang_id])],
         [KeyboardButton(text=globals.BTN_USERS[lang_id]), KeyboardButton(text=globals.BTN_NEWS[lang_id])],
-        [KeyboardButton(text=globals.BTN_INFOR[lang_id]), KeyboardButton(text=globals.BTN_SETTINGS[lang_id])],
-        [KeyboardButton(text=globals.BTN_ABOUT_US[lang_id])],
+        [KeyboardButton(text=globals.BTN_SETTINGS[lang_id]),KeyboardButton(text=globals.BTN_ABOUT_US[lang_id])],
     ]
     ##SEND NEWS TO ALL #############
     if chat_id == ADMIN_ID:
         buttons = [
-            [KeyboardButton(text="So'nggi yangilikni barchaga jo'natish"), KeyboardButton(text="Test natijasini barchaga jo'natish")],
+            [KeyboardButton(text="So'nggi yangilikni barchaga jo'natish")], #KeyboardButton(text="Test natijasini barchaga jo'natish")],
             #[KeyboardButton(text=globals.BTN_ORDER[lang_id]),KeyboardButton(text=globals.BTN_TEST[lang_id])],
-            [KeyboardButton(text=globals.BTN_COMMENTS[lang_id]), KeyboardButton(text=globals.BTN_INFORS[lang_id])],
+            [KeyboardButton(text=globals.BTN_COMMENTS[lang_id]), KeyboardButton(text=globals.BTN_INFOR[lang_id])],
             [KeyboardButton(text=globals.BTN_USERS[lang_id]), KeyboardButton(text=globals.BTN_NEWS[lang_id])],
-            [KeyboardButton(text=globals.BTN_INFOR[lang_id]), KeyboardButton(text=globals.BTN_SETTINGS[lang_id])],
-            [KeyboardButton(text=globals.BTN_ABOUT_US[lang_id])],
+            [KeyboardButton(text=globals.BTN_SETTINGS[lang_id]), KeyboardButton(text=globals.BTN_ABOUT_US[lang_id])],
         ]
 
     if message_id:

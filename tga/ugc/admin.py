@@ -13,7 +13,7 @@ admin.site.register(User)
 admin.site.register(User_test)
 admin.site.register(Comment)
 admin.site.register(Murojat)
-admin.site.register(Information)
+#admin.site.register(Information)
 admin.site.register(About)
 admin.site.register(New)
 

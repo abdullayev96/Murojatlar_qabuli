@@ -177,6 +177,7 @@ def message_handler(update, context):
     global text
     message = update.message.text
     user = update.message.from_user
+    phone = update.message.contact
     #print("Message: ", message)
 
 
@@ -286,7 +287,7 @@ def message_handler(update, context):
             check(update, context)
 
         elif not db_user["phone_number"]:
-            db.update_user_data(user.id, "phone_number", message)
+            db.update_user_data(user.id, "phone_number", phone)
             check(update, context)
 
         else:
@@ -404,12 +405,12 @@ def message_handler(update, context):
             context.user_data["state"] = globals.STATES["result"]
 
 
-        elif message == globals.BTN_INFORS[db_user['lang_id']]:
-            update.message.reply_text(
-                text=globals.TEXT_GIVE_FEEDBACK3[db_user['lang_id']],
-                parse_mode="HTML"
-            )
-            context.user_data["state"] = globals.STATES["test"]
+        # elif message == globals.BTN_INFORS[db_user['lang_id']]:
+        #     update.message.reply_text(
+        #         text=globals.TEXT_GIVE_FEEDBACK3[db_user['lang_id']],
+        #         parse_mode="HTML"
+        #     )
+        #     context.user_data["state"] = globals.STATES["test"]
 
 
 
@@ -508,18 +509,18 @@ def message_handler(update, context):
         context.user_data["state"] = globals.STATES["reg"]
         check(update, context)
 
-    elif state == 7:
-        update.message.reply_text(text=globals.BTN_COMMENTS_SAVE3[db_user['lang_id']],
-                                  parse_mode="HTML")
-        message = update.message.text
-        db.create_information(user.id, user.username, message)
-        context.bot.send_message(
-            chat_id=ADMIN_ID,
-            text=f"<i>{user.username}:</i>\n{message}",
-            parse_mode='HTML'
-        )
-        context.user_data["state"] = globals.STATES["reg"]
-        check(update, context)
+    # elif state == 7:
+    #     update.message.reply_text(text=globals.BTN_COMMENTS_SAVE3[db_user['lang_id']],
+    #                               parse_mode="HTML")
+    #     message = update.message.text
+    #     db.create_information(user.id, user.username, message)
+    #     context.bot.send_message(
+    #         chat_id=ADMIN_ID,
+    #         text=f"<i>{user.username}:</i>\n{message}",
+    #         parse_mode='HTML'
+    #     )
+    #     context.user_data["state"] = globals.STATES["reg"]
+    #     check(update, context)
 
 
     # elif state == 5:

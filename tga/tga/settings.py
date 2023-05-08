@@ -120,6 +120,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # PROXY_URL = 'https://telegg.ru/orig/bot'
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-TOKEN = ''
+TOKEN = '6165627762:AAFpvknERznySUAyQ5441vBoDEzPdXKlICA'
 
 

@@ -148,17 +148,17 @@ class Murojat(models.Model):
         verbose_name_plural = "Shikoyat va Muammolar"
 
 
-class Information(models.Model):
-    user_id = models.IntegerField()
-    message = models.TextField()
-    username = models.CharField(max_length=200)
-
-    def __str__(self):
-        return f"{self.message} ||{self.username}'"
-
-    class Meta:
-        verbose_name = "Malumot"
-        verbose_name_plural = "Malumotlar"
+# class Information(models.Model):
+#     user_id = models.IntegerField()
+#     message = models.TextField()
+#     username = models.CharField(max_length=200)
+#
+#     def __str__(self):
+#         return f"{self.message} ||{self.username}'"
+#
+#     class Meta:
+#         verbose_name = "Malumot"
+#         verbose_name_plural = "Malumotlar"
 
 # class Test_result(models.Model):
 #     id_number  = models.PositiveIntegerField()
