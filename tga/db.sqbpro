@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="D:/bot3lang-main/tga/db.sqlite3" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="1"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="150"/><column_width id="3" width="4523"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,7:mainugc_new"/><default_encoding codec=""/><browse_table_settings><table schema="main" name="about_us" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="61"/><column index="2" value="95"/><column index="3" value="87"/><column index="4" value="113"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="ugc_information" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="61"/><column index="2" value="230"/><column index="3" value="193"/><column index="4" value="209"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="ugc_murojat" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="61"/><column index="2" value="177"/><column index="3" value="212"/><column index="4" value="112"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="ugc_new" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="61"/><column index="2" value="267"/><column index="3" value="300"/><column index="4" value="300"/><column index="5" value="122"/><column index="6" value="122"/><column index="7" value="300"/><column index="8" value="122"/><column index="9" value="295"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table><table schema="main" name="user" show_row_id="0" encoding="" plot_x_axis="" unlock_view_pk="_rowid_"><sort/><column_widths><column index="1" value="61"/><column index="2" value="122"/><column index="3" value="117"/><column index="4" value="167"/><column index="5" value="88"/><column index="6" value="117"/></column_widths><filter_values/><conditional_formats/><row_id_formats/><display_formats/><hidden_columns/><plot_y_axes/><global_filter/></table></browse_table_settings></tab_browse><tab_sql><sql name="SQL 1">-------min(), max(),count(), summ(), avg()
+
+---INSERT INTO user(first_name, last_name, age, user_id,zona) VALUES(&quot;Sherzod&quot;, &quot;Umarov&quot;, 26, 3, 2311111);
+
+--SELECT min(age) from user;
+--SELECT min(age) from user WHERE age &gt;15 and id&lt;3;
+
+--------max()
+--SELECT max(age)  from user;
+--SELECT max(zona) from user WHERE age &lt; 67;
+--SELECT max(user_id) from user WHERE zona&lt;34523535;
+
+---------- count()
+--SELECT count(age) as takror from user WHERE age =23;
+--SELECT count(user_id) as tak from user where user_id =1 ;
+--SELECT count(user_id) as takror from user; 
+--SELECT count(*), age from user GROUP by age;
+
+--SELECT user_id, sum(age) as yigindi from user; ---GROUP by user_id
+--SELECT user_id, sum(age) as yigindi from user GROUP by user_id;
+---SELECT user_id, sum(age) as gon from user GROUP by user_id ORDER by gon  DESC;
+--SELECT user_id, sum(age) as gon from user  where age&gt; 26 GROUP by user_id ORDER by gon  DESC;
+
+---SELECT   avg(age) from user GROUP by user_id;
+--SELECT * from user  OFFSET   LIMIT 2;
+
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
